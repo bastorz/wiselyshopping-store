@@ -16,9 +16,9 @@ const MainNav: React.FC<MainNavProps> = ({
   const pathname = usePathname();
 
   const routes = data.map((route) => ({
-    href: `/category/${route.name}`,
+    href: `/category/${route.id}`,
     label: route.name,
-    active: pathname === `/category/${route.name}`,
+    active: pathname === `/category/${route.id}`,
   }));
 
   return (
@@ -27,8 +27,8 @@ const MainNav: React.FC<MainNavProps> = ({
     >
       {routes.map((route) => (
         <Link
-          key={route.label}
-          href={route.label}
+          key={route.href}
+          href={route.href}
           className={cn(
             'text-sm font-medium transition-colors hover:text-black',
             route.active ? 'text-black' : 'text-neutral-500'
