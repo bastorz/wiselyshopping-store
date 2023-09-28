@@ -1,12 +1,17 @@
+import Link from "next/link"
+
 const Footer = () => {
     return (
-        <div className="bg-white border-t">
-            <div className="mx-auto py-10">
-                <p className="text-center text-xs text-black">
+            <div className="mx-auto pb-16">
+                <p className="text-center text-lg text-black">
                     &copy; 2023 Wisely Shopping, Inc. All rights reserved.
                 </p>
+               <Link href="https://damianalcalay.vercel.app/" target="_blank">
+                    <p className="text-center text-black mt-2 text-lg">
+                       Powered by <span className="text-blue-700 font-bold hover:text-blue-700/80 transition">Damian Alcalay</span>
+                    </p>
+               </Link>
             </div>
-        </div>
     )
 }
 
